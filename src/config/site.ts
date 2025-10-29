@@ -230,17 +230,17 @@ export interface TemplateConfig {
 
 export const siteConfig = {
   metadata: {
-    title: 'Dubstack Starter – Modern Service Template',
+    title: 'DubStack Starter – Modern Service Template',
     description:
-      'Dubstack is a Next.js + shadcn/ui starter built for service businesses that want a reusable, configuration-first marketing site.',
+      'DubStack is a Next.js + shadcn/ui starter built for service businesses that want a reusable, configuration-first marketing site.',
   },
   branding: {
-    companyName: 'Dubstack Studio',
-    shortName: 'Dubstack',
+    companyName: 'DubStack Studio',
+    shortName: 'DubStack',
     tagline: 'Launch-ready marketing system for service businesses',
     logo: {
       src: '/placeholder-logo.svg',
-      alt: 'Dubstack logo',
+      alt: 'DubStack logo',
     },
   },
   contact: {
@@ -270,7 +270,7 @@ export const siteConfig = {
     hero: {
       eyebrow: 'Modular Marketing Template',
       title: 'Launch a polished services site in days with',
-      highlight: 'Dubstack',
+      highlight: 'DubStack',
       description:
         'Use this starter as a foundation for agencies, consultants, or operators. Swap copy from a single TypeScript config and show up with a story that resonates.',
       metric: {
@@ -290,10 +290,10 @@ export const siteConfig = {
       },
     },
     whoWeAre: {
-      heading: 'We built Dubstack to accelerate service-led teams',
-      highlight: 'Dubstack Studio',
+      heading: 'We built DubStack to accelerate service-led teams',
+      highlight: 'DubStack Studio',
       paragraphs: [
-        'Dubstack is a reusable marketing site template powered by Next.js, Tailwind CSS, and shadcn/ui. Every section is wired for high-clarity storytelling and conversion-focused layouts.',
+        'DubStack is a reusable marketing site template powered by Next.js, Tailwind CSS, and shadcn/ui. Every section is wired for high-clarity storytelling and conversion-focused layouts.',
         'All of the messaging, social proof, and CTAs live in one typed configuration file. Swap voice and value props without hunting through JSX or duplicating components.',
         'Use the starter as-is or treat it as scaffolding for your own component library. Either way you get a production-ready foundation with analytics, forms, and best-practice patterns out of the box.',
       ],
@@ -373,7 +373,7 @@ export const siteConfig = {
       ] as const,
     },
     whyChoose: {
-      heading: 'Why teams pick Dubstack',
+      heading: 'Why teams pick DubStack',
       description:
         'Focus on storytelling and results while the template covers typography, layouts, accessibility, and instrumentation.',
       quote:
@@ -418,7 +418,7 @@ export const siteConfig = {
           challenge:
             'Team needed a narrative that connected their behind-the-scenes work to client results before launching nationwide.',
           solution:
-            'Rebuilt positioning, defined packaged offers, and launched a Dubstack-powered site with guided lead capture.',
+            'Rebuilt positioning, defined packaged offers, and launched a DubStack-powered site with guided lead capture.',
           metrics: [
             { label: 'Pipeline velocity', value: 32, suffix: '%↑' },
             { label: 'Close rate', value: 18, suffix: 'pts' },
@@ -443,7 +443,7 @@ export const siteConfig = {
             { label: 'Sales cycle', value: 26, suffix: '%↓' },
           ] as const,
           quote:
-            'Dubstack let us focus on the program. We swapped copy in an afternoon and had a credible digital presence the next day.',
+            'DubStack let us focus on the program. We swapped copy in an afternoon and had a credible digital presence the next day.',
           client: 'Morgan Blake',
           clientTitle: 'Managing Partner, Signal Advisory',
         },
@@ -454,7 +454,7 @@ export const siteConfig = {
           challenge:
             'Sought a flexible site for recurring cohorts with room for rotating testimonials, FAQs, and gated curriculum previews.',
           solution:
-            'Plugged Dubstack into a CMS, set up audience-specific pages, and layered in automated onboarding workflows.',
+            'Plugged DubStack into a CMS, set up audience-specific pages, and layered in automated onboarding workflows.',
           metrics: [
             { label: 'Waitlist growth', value: 3, suffix: 'x' },
             { label: 'Launch conversion', value: 19, suffix: '%↑' },
@@ -495,7 +495,7 @@ export const siteConfig = {
         {
           id: 3,
           quote:
-            'Our clients commented on the clarity instantly. Dubstack shipped with structure, proof, and motion built in.',
+            'Our clients commented on the clarity instantly. DubStack shipped with structure, proof, and motion built in.',
           author: 'Samir Patel',
           role: 'Managing Director',
           company: 'Signal Works',
@@ -515,7 +515,7 @@ export const siteConfig = {
       ] as const,
     },
     team: {
-      heading: 'Your Dubstack build crew',
+      heading: 'Your DubStack build crew',
       description:
         'Introduce the people behind the work. Swap in founders, collaborators, or client-facing leads so prospects know who they will partner with.',
       members: [
@@ -582,7 +582,7 @@ export const siteConfig = {
       ] as const,
     },
     cta: {
-      heading: 'Ready to tailor Dubstack to your next engagement?',
+      heading: 'Ready to tailor DubStack to your next engagement?',
       description:
         'Spin up a discovery call or drop your questions. We will walk through the template, swap in your content, and map the launch plan.',
       primaryCta: {
@@ -599,9 +599,9 @@ export const siteConfig = {
   },
   blog: {
     metadata: {
-      title: 'Insights | Dubstack',
+      title: 'Insights | DubStack',
       description:
-        'Articles and playbooks on packaging services, proving value, and running modern marketing engagements with Dubstack.',
+        'Articles and playbooks on packaging services, proving value, and running modern marketing engagements with DubStack.',
     },
     hero: {
       eyebrow: 'Insights & Playbooks',
@@ -612,7 +612,7 @@ export const siteConfig = {
     cta: {
       heading: 'Want a walkthrough tailored to your use case?',
       description:
-        'Bring your team to a live session and we will map Dubstack to the exact services you deliver.',
+        'Bring your team to a live session and we will map DubStack to the exact services you deliver.',
       primaryCta: {
         label: 'Book a discovery call',
         href: '/book',
@@ -622,12 +622,12 @@ export const siteConfig = {
   },
   booking: {
     metadata: {
-      title: 'Book a discovery call | Dubstack',
+      title: 'Book a discovery call | DubStack',
       description:
-        'Schedule a 30-minute conversation to see how Dubstack adapts to your services, clients, and internal workflows.',
+        'Schedule a 30-minute conversation to see how DubStack adapts to your services, clients, and internal workflows.',
     },
     hero: {
-      heading: "Let's map Dubstack to your next launch",
+      heading: "Let's map DubStack to your next launch",
       description:
         'Choose a time that works for you. We will review your current site, identify fast wins, and outline how the template accelerates delivery.',
     },
@@ -650,11 +650,11 @@ export const siteConfig = {
     ] as const,
     embed: {
       url: 'https://cal.com/your-company/dubstack-discovery',
-      title: 'Schedule a discovery call with Dubstack',
+      title: 'Schedule a discovery call with DubStack',
     },
     steps: [
       'Share a quick snapshot of your team, services, and goals.',
-      'Review a tailored Dubstack walkthrough with implementation options.',
+      'Review a tailored DubStack walkthrough with implementation options.',
       'Align on the delivery approach, timeline, and responsibilities.',
       'Decide on next steps and get the kickoff checklist.',
     ] as const,

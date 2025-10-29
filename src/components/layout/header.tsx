@@ -1,5 +1,12 @@
 'use client';
 
+import {
+  OrganizationSwitcher,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from '@clerk/nextjs';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +21,11 @@ const navigation = siteConfig.navigation.quickLinks.filter(
   (link) => link.href !== '/book',
 );
 
-export function Header() {
+type HeaderProps = {
+  orgsEnabled?: boolean;
+};
+
+export function Header({ orgsEnabled = false }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -70,21 +81,30 @@ export function Header() {
 
         <div className='flex items-center space-x-2'>
           <ThemeSwitcher />
-          <Button asChild className='hidden md:inline-flex group'>
-            <Link
-              href='/book'
-              onClick={() =>
-                posthog.capture('book_consultation_clicked', {
-                  location: 'header',
-                })
-              }
-            >
-              {siteConfig.homepage.cta.primaryCta.label}
-              <span className='ml-2 inline-block transition-transform group-hover:translate-x-1'>
-                →
-              </span>
-            </Link>
-          </Button>
+          <SignedOut>
+            <SignInButton mode='modal'>
+              <Button className='hover:cursor-pointer'>Sign In</Button>
+            </SignInButton>
+            <Button asChild className='hidden md:inline-flex group'>
+              <Link
+                href='/book'
+                onClick={() =>
+                  posthog.capture('book_consultation_clicked', {
+                    location: 'header',
+                  })
+                }
+              >
+                {siteConfig.homepage.cta.primaryCta.label}
+                <span className='ml-2 inline-block transition-transform group-hover:translate-x-1'>
+                  →
+                </span>
+              </Link>
+            </Button>
+          </SignedOut>
+          <SignedIn>
+            {orgsEnabled && <OrganizationSwitcher />}
+            <UserButton />
+          </SignedIn>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className='md:hidden'>
