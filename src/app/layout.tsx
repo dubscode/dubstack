@@ -1,5 +1,7 @@
 import './globals.css';
 
+import { ClerkProvider } from '@clerk/nextjs';
+import { shadcn } from '@clerk/themes';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import {
@@ -106,29 +108,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${sourceSerif.variable} ${geistMono.variable} font-sans antialiased`}
-      >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
+    <ClerkProvider
+      appearance={{
+        theme: shadcn,
+      }}
+    >
+      <html lang='en' suppressHydrationWarning>
+        <body
+          className={`${inter.variable} ${sourceSerif.variable} ${geistMono.variable} font-sans antialiased`}
         >
-          <div className='relative min-h-screen'>
-            {/* Grid background pattern */}
-            <div className='fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none' />
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className='relative min-h-screen'>
+              {/* Grid background pattern */}
+              <div className='fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none' />
 
-            <div className='relative flex min-h-screen flex-col'>
-              <Header />
-              <main className='flex-1'>{children}</main>
-              <Footer />
+              <div className='relative flex min-h-screen flex-col'>
+                <Header />
+                <main className='flex-1'>{children}</main>
+                <Footer />
+              </div>
             </div>
-          </div>
-          <Analytics />
-        </ThemeProvider>
-      </body>
-    </html>
+            <Analytics />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
